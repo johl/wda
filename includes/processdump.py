@@ -148,7 +148,7 @@ class DumpProcessor:
 				elif title.startswith('Property:P'):
 					isProperty = True
 					title = title[9:]
-					if not self.processedproperties[int(title[1:])]:
+					if not (len(self.processedproperties) > int(title[1:])):
 						isNewEntity = True
 						self.processedproperties[int(title[1:])] = True
 					else:
